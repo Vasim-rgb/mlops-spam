@@ -1,0 +1,850 @@
+[2025-08-13 11:24:25,886: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:24:25,952: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:24:25,960: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:24:25,960: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:24:25,960: ERROR: data_ingestion_pipeline: yaml file is empty]
+Traceback (most recent call last):
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\utils\common.py", line 31, in read_yaml
+    return ConfigBox(content)
+  File "box\\box.py", line 296, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_ingestion_pipeline.py", line 24, in <module>
+    obj.initiate_data_ingestion()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_ingestion_pipeline.py", line 13, in initiate_data_ingestion
+    config=ConfigurationManager()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\config\configuration.py", line 15, in __init__
+    self.schema=read_yaml(schema_filepath)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\utils\common.py", line 33, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2025-08-13 11:24:54,268: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:24:54,278: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:24:54,283: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:24:54,295: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:24:54,301: INFO: common: created directory at: artifacts]
+[2025-08-13 11:24:54,303: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 11:24:57,231: INFO: data_ingestion: artifacts/data_ingestion/data download! with following info: 
+Date: Wed, 13 Aug 2025 05:54:49 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With,Accept-Encoding, Accept, X-Requested-With
+x-repository-download: git clone https://github.com/mohitgupta-1O1/Kaggle-SMS-Spam-Collection-Dataset-.git
+x-raw-download: https://raw.githubusercontent.com/mohitgupta-1O1/Kaggle-SMS-Spam-Collection-Dataset-/master/spam.csv
+ETag: W/"6610b033bc6c832ff9c16130c4ff9129"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Server: github.com
+Accept-Ranges: bytes
+Set-Cookie: _gh_sess=AhpokHZTgWaTPCB1ceNLhZLdwG6yIrP1%2B4i5Ts%2BkXt5xYX81Lm8yydT7h8QPu1AtwOvaVaQN7NYn%2BkLIPUaeWQpmIaX8JpdO97AXPxLcsVu%2FhdXk%2BoP2YdvFl3HuNgPQV7dNhNS9eKl1UaEKqs%2Fj62hXw018j%2BSBMHqZUE3TsWQKBWxWD%2FuMrqL%2F16bFNsQH8CHuGY0WltKPTnj7wScsz2xBwNjJnn4hZjwYwp43ZvePB7CwWRJaJz46Y9z1b6EWHI4ZViaoETVvwrv3ujf1KQ%3D%3D--1%2BDI3guw57ABKCrz--j0piw%2FwzbAja0cxFBgINiw%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.322696053.1755064489; Path=/; Domain=github.com; Expires=Thu, 13 Aug 2026 05:54:49 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Thu, 13 Aug 2026 05:54:49 GMT; HttpOnly; Secure; SameSite=Lax
+X-GitHub-Request-Id: CE61:1F1CB4:814CA4:A07A53:689C28A9
+connection: close
+Transfer-Encoding: chunked
+
+]
+[2025-08-13 11:24:57,242: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:29:07,419: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:29:07,448: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:29:07,458: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:29:07,458: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:29:07,462: INFO: common: created directory at: artifacts]
+[2025-08-13 11:29:07,462: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 11:29:10,050: INFO: data_ingestion: artifacts/data_ingestion/data download! with following info: 
+Connection: close
+Content-Length: 503663
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/octet-stream
+ETag: "7f1b84caec4e45ed9903e5848b178a4e625fb130ea99aaf346d034e97060f848"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2266:1EF2EC:DCD72:24CCA7:689C29A4
+Accept-Ranges: bytes
+Date: Wed, 13 Aug 2025 05:59:02 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10236-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1755064742.351284,VS0,VE258
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: fd2b4a07bbf5d5fc9c57035b8a2f91e520bdf818
+Expires: Wed, 13 Aug 2025 06:04:02 GMT
+Source-Age: 0
+
+]
+[2025-08-13 11:29:10,050: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:29:38,279: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:29:38,303: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:29:38,303: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:29:38,311: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:29:38,311: INFO: common: created directory at: artifacts]
+[2025-08-13 11:29:38,315: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 11:29:39,942: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Connection: close
+Content-Length: 503663
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/octet-stream
+ETag: "7f1b84caec4e45ed9903e5848b178a4e625fb130ea99aaf346d034e97060f848"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2266:1EF2EC:DCD72:24CCA7:689C29A4
+Accept-Ranges: bytes
+Date: Wed, 13 Aug 2025 05:59:33 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10227-MAA
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1755064773.192761,VS0,VE1
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: edc1ef44b6f926a74c638f1e6d0b1a47315f254f
+Expires: Wed, 13 Aug 2025 06:04:33 GMT
+Source-Age: 31
+
+]
+[2025-08-13 11:29:39,942: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:42:21,353: INFO: data_validaton: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 11:42:21,364: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:42:21,367: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:42:21,371: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:42:21,373: INFO: common: created directory at: artifacts]
+[2025-08-13 11:42:21,375: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 11:42:21,375: ERROR: data_validaton: [Errno 2] No such file or directory: 'artifacts/data_ingestion/local_data_file']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton.py", line 21, in <module>
+    obj.initiate_data_validation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 16, in validate_all_columns
+    data=pd.read_csv(self.config.data_tobe_validated)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/local_data_file'
+[2025-08-13 11:43:04,597: INFO: data_validaton: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 11:43:04,643: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:43:04,643: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:43:04,643: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:43:04,643: INFO: common: created directory at: artifacts]
+[2025-08-13 11:43:04,643: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 11:43:04,652: ERROR: data_validaton: 'utf-8' codec can't decode bytes in position 606-607: invalid continuation byte]
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton.py", line 21, in <module>
+    obj.initiate_data_validation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 16, in validate_all_columns
+    data=pd.read_csv(self.config.data_tobe_validated)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1679, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas\_libs\parsers.pyx", line 550, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas\_libs\parsers.pyx", line 639, in pandas._libs.parsers.TextReader._get_header
+  File "pandas\_libs\parsers.pyx", line 850, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas\_libs\parsers.pyx", line 861, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas\_libs\parsers.pyx", line 2021, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 606-607: invalid continuation byte
+[2025-08-13 11:46:24,892: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:46:24,898: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:46:24,904: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:46:24,904: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:46:24,904: INFO: common: created directory at: artifacts]
+[2025-08-13 11:46:24,904: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 11:46:24,904: INFO: data_ingestion: File already exists]
+[2025-08-13 11:46:24,904: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:46:32,732: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 11:46:32,742: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:46:32,745: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:46:32,745: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:46:32,745: INFO: common: created directory at: artifacts]
+[2025-08-13 11:46:32,745: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 11:46:32,792: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:50:32,624: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:50:32,665: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:50:32,665: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:50:32,671: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:50:32,674: INFO: common: created directory at: artifacts]
+[2025-08-13 11:50:32,676: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 11:50:34,063: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Content-Type: text/html; charset=utf-8
+Date: Wed, 13 Aug 2025 06:20:27 GMT
+Cache-Control: no-cache, no-store
+Pragma: no-cache
+Set-Cookie: ka_sessionid=b1f61c8059fa154a5460fba02c65b76d; max-age=2626560; path=/
+Set-Cookie: CSRF-TOKEN=CfDJ8H3GHv39YMxDjEpKbXZX9wFZUiRdASxg9Hz_lqf7MHDBbwVzrtKxTKbsaM-QXj18nSkij7t8M7x3M521_Ym8YV1D09d2T_UdVxWaiXex0g; path=/; secure; samesite=strict; httponly
+Set-Cookie: XSRF-TOKEN=CfDJ8H3GHv39YMxDjEpKbXZX9wFtJbIWEIZ6KDLwGG5eU4-QuzEMiHLqcr39fWLOF-cJN6emBokJEF_0PPvdBECdbUunaMtLms-EBRKfksoOkwzz1A; path=/; secure; samesite=strict
+Set-Cookie: CLIENT-TOKEN=eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJrYWdnbGUiLCJhdWQiOiJjbGllbnQiLCJzdWIiOiIiLCJuYnQiOiIyMDI1LTA4LTEzVDA2OjIwOjI3LjgxMzkyODFaIiwiaWF0IjoiMjAyNS0wOC0xM1QwNjoyMDoyNy44MTM5MjgxWiIsImp0aSI6IjRiNTk3MzBkLWNmNjMtNGM0MC05NDQwLTBlZDM5MjY5OGFkYyIsImV4cCI6IjIwMjUtMDktMTNUMDY6MjA6MjcuODEzOTI4MVoiLCJhbm9uIjp0cnVlLCJmZiI6WyJLZXJuZWxzT3BlbkluQ29sYWJMb2NhbFVybCIsIk1ldGFzdG9yZUNoZWNrQWdncmVnYXRlRmlsZUhhc2hlcyIsIlVzZXJMaWNlbnNlQWdyZWVtZW50U3RhbGVuZXNzVHJhY2tpbmciLCJLZXJuZWxzU2V0dGluZ3NUYWIiLCJLZXJuZWxzUGF5VG9TY2FsZSIsIk5ld0FuZEV4Y2l0aW5nQ29udGVudExvaHAiLCJVbmlmaWVkVm90ZXNSZWFkIiwiR2FtZUFyZW5hIiwiUmV2aXNlZENvbXBldGl0aW9uR21QbHVzTGV2ZWxzIiwiUmVkaXJlY3RLYWdnbGVPcmdCZW5jaG1hcmtzIiwiQ29tbXVuaXR5V3JpdGVVcHMiLCJGZWF0dXJlZE1vZGVsc1NoZWxmIiwiRGF0YXNldFBvbGFyc0RhdGFMb2FkZXIiLCJLZXJuZWxzRmlyZWJhc2VMb25nUG9sbGluZyIsIkZyb250ZW5kRXJyb3JSZXBvcnRpbmciLCJBbGxvd0ZvcnVtQXR0YWNobWVudHMiLCJUZXJtc09mU2VydmljZUJhbm5lciIsIlJlZ2lzdHJhdGlvbk5ld3NFbWFpbFNpZ251cElzT3B0T3V0IiwiRGF0YXNldFVwbG9hZGVyRHVwbGljYXRlRGV0ZWN0aW9uIl0sImZmZCI6eyJNb2RlbElkc0FsbG93SW5mZXJlbmNlIjoiIiwiTW9kZWxJbmZlcmVuY2VQYXJhbWV0ZXJzIjoieyBcIm1heF90b2tlbnNcIjogMTI4LCBcInRlbXBlcmF0dXJlXCI6IDAuNCwgXCJ0b3Bfa1wiOiA1IH0iLCJTcG90bGlnaHRDb21tdW5pdHlDb21wZXRpdGlvbiI6IjEwMTAzOSwxMDU4NzQsOTk2NTAsOTExOTYsOTE0NTEsOTE0NDgsODk4NTAsODg2MTIsOTQ2ODksOTc1NjksOTg0NTAsOTQxNDcsOTQxNDcsOTYxNjQsMTA1Mzk5IiwiUGVyc29uYWxCZW5jaG1hcmtzUHJpb3JpdHlUYXNrSWRzIjoiMTA2LDIyOSwxMDUsMjI3LDExMCwyMjgsMTE2LDIzMCwxNzMsMjMyLDE3NSwyMzksMjY0LDI0OSwyNDciLCJTdHNNaW5GaWxlcyI6Ijc1MDAwIiwiRmVhdHVyZWRCZW5jaG1hcmtzIjoiMSwxNiw1MSwxMzQiLCJTdHNNaW5HYiI6IjEiLCJHZXR0aW5nU3RhcnRlZENvbXBldGl0aW9ucyI6IjMxMzYsNTQwNyw4NjUxOCwzNDM3NyIsIkNsaWVudFJwY1JhdGVMaW1pdFFwcyI6IjQwIiwiQ2xpZW50UnBjUmF0ZUxpbWl0UXBtIjoiNTAwIiwiQWRkRmVhdHVyZUZsYWdzVG9QYWdlTG9hZFRhZyI6ImRpc2FibGVkIiwiS2VybmVsRWRpdG9yQXV0b3NhdmVUaHJvdHRsZU1zIjoiMzAwMDAiLCJLZXJuZWxzTDRHcHVDb21wcyI6Ijg2MDIzLDg0Nzk1LDg4OTI1LDkxNDk2IiwiRmVhdHVyZWRDb21tdW5pdHlDb21wZXRpdGlvbnMiOiI2MDA5NSw1NDAwMCw1NzE2Myw4MDg3NCw4MTc4Niw4MTcwNCw4MjYxMSw4NTIxMCIsIkdhbWVBcmVuYUZlYXR1cmVkU3RyZWFtIjoiIiwiRW1lcmdlbmN5QWxlcnRCYW5uZXIiOiIiLCJDb21wZXRpdGlvbk1ldHJpY1RpbWVvdXRNaW51dGVzIjoiMzAiLCJLZXJuZWxzUGF5VG9TY2FsZVByb1BsdXNHcHVIb3VycyI6IjMwIiwiS2VybmVsc1BheVRvU2NhbGVQcm9HcHVIb3VycyI6IjE1IiwiR2FtZUFyZW5hU3RyZWFtTGlua3MiOiIiLCJEYXRhc2V0c1NlbmRQZW5kaW5nU3VnZ2VzdGlvbnNSZW1pbmRlcnNCYXRjaFNpemUiOiIxMDAiLCJHYW1lQXJlbmFCZW5jaG1hcmtWZXJzaW9ucyI6IjEyOSJ9LCJwaWQiOiJrYWdnbGUtMTYxNjA3Iiwic3ZjIjoid2ViLWZlIiwic2RhayI6IkFJemFTeUE0ZU5xVWRSUnNrSnNDWldWei1xTDY1NVhhNUpFTXJlRSIsImJsZCI6IjhkMDI0MmU1OGY4MGQwMTE3NDM2ZDQxNWUzODBhMWQ3MDUwNzg3MzUifQ.; path=/; secure; samesite=lax
+Set-Cookie: GCLB=COLl3cWhm8O1gAEQAw; path=/; HttpOnly
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Content-Security-Policy: object-src 'none'; script-src 'nonce-YbTT96vQY+GzVAngAHzTCA==' 'report-sample' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:; base-uri 'none'; report-uri https://csp.withgoogle.com/csp/kaggle/20201130; frame-src 'self' https://www.kaggleusercontent.com https://www.youtube.com/embed/ https://youtu.be https://polygraph-cool.github.io https://www.google.com/recaptcha/ https://www.docdroid.com https://www.docdroid.net https://kaggle-static.storage.googleapis.com https://kkb-production.jupyter-proxy.kaggle.net https://kkb-production.firebaseapp.com https://kaggle-metastore.firebaseapp.com https://apis.google.com https://content-sheets.googleapis.com/ https://accounts.google.com/ https://storage.googleapis.com https://docs.google.com https://drive.google.com https://calendar.google.com/ https://google.qualtrics.com/ https://player.kick.com/ https://player.twitch.tv/ https://kaggle.com localhost;
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Via: 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Connection: close
+Transfer-Encoding: chunked
+
+]
+[2025-08-13 11:50:34,094: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:51:33,998: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:51:34,008: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:51:34,019: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:51:34,019: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:51:34,019: INFO: common: created directory at: artifacts]
+[2025-08-13 11:51:34,019: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 11:51:34,019: INFO: data_ingestion: File already exists]
+[2025-08-13 11:51:34,019: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:51:50,169: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:51:50,178: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:51:50,180: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:51:50,182: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:51:50,182: INFO: common: created directory at: artifacts]
+[2025-08-13 11:51:50,182: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 11:51:52,195: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Connection: close
+Content-Length: 503663
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/octet-stream
+ETag: "7f1b84caec4e45ed9903e5848b178a4e625fb130ea99aaf346d034e97060f848"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2266:1EF2EC:DCD72:24CCA7:689C29A4
+Accept-Ranges: bytes
+Date: Wed, 13 Aug 2025 06:21:45 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10249-MAA
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1755066105.137313,VS0,VE308
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 399ea5d5a048df4ddfcf9ae32971e2b3ed7476f7
+Expires: Wed, 13 Aug 2025 06:26:45 GMT
+Source-Age: 0
+
+]
+[2025-08-13 11:51:52,207: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:53:51,126: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 11:53:51,136: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:53:51,146: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:53:51,149: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:53:51,149: INFO: common: created directory at: artifacts]
+[2025-08-13 11:53:51,149: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 11:53:51,160: ERROR: data_validaton_pipeline: [Errno 2] No such file or directory: 'artifacts/data_ingestion/local_data_file']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 21, in <module>
+    obj.initiate_data_validation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 37, in validate_all_columns
+    raise e
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 16, in validate_all_columns
+    data=pd.read_csv(self.config.data_tobe_validated, encoding='latin1')
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/local_data_file'
+[2025-08-13 11:54:24,185: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 11:54:24,209: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:54:24,213: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:54:24,216: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:54:24,216: INFO: common: created directory at: artifacts]
+[2025-08-13 11:54:24,216: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 11:54:24,315: ERROR: data_validaton_pipeline: local variable 'df' referenced before assignment]
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 21, in <module>
+    obj.initiate_data_validation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 37, in validate_all_columns
+    raise e
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 18, in validate_all_columns
+    df = df.dropna(axis=1, how='all')
+UnboundLocalError: local variable 'df' referenced before assignment
+[2025-08-13 11:54:53,825: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 11:54:53,830: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:54:53,840: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:54:53,843: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:54:53,843: INFO: common: created directory at: artifacts]
+[2025-08-13 11:54:53,843: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 11:54:53,938: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:58:00,343: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-13 11:58:00,353: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:58:00,367: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:58:00,367: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:58:00,376: INFO: common: created directory at: artifacts]
+[2025-08-13 11:58:00,389: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 11:58:00,392: INFO: data_ingestion: File already exists]
+[2025-08-13 11:58:00,392: INFO: data_ingestion_pipeline: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:58:12,752: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 11:58:12,765: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:58:12,765: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:58:12,765: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:58:12,765: INFO: common: created directory at: artifacts]
+[2025-08-13 11:58:12,765: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 11:58:12,802: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 11:59:33,758: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 11:59:33,768: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 11:59:33,777: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 11:59:33,799: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 11:59:33,799: INFO: common: created directory at: artifacts]
+[2025-08-13 11:59:33,802: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 11:59:33,839: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 12:08:05,514: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 12:08:05,527: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:08:05,532: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:08:05,535: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:08:05,537: INFO: common: created directory at: artifacts]
+[2025-08-13 12:08:05,539: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 12:08:05,601: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 12:23:11,090: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 12:23:11,130: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:23:11,130: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:23:11,158: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:23:11,159: INFO: common: created directory at: artifacts]
+[2025-08-13 12:23:11,161: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 12:23:11,213: INFO: data_validation: all columns: ['target', 'text']]
+[2025-08-13 12:23:11,213: INFO: data_validation: all schema: dict_keys(['target', 'text'])]
+[2025-08-13 12:23:11,213: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 12:24:37,823: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 12:24:37,833: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:24:37,837: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:24:37,839: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:24:37,841: INFO: common: created directory at: artifacts]
+[2025-08-13 12:24:37,842: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 12:24:37,871: ERROR: data_validaton_pipeline: "'ConfigBox' object has no attribute 'colmns'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'COLMNS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 632, in box.box.Box.__getattr__
+  File "box\\box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'COLMNS'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'COLMNS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'COLMNS'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'colmns'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 632, in box.box.Box.__getattr__
+  File "box\\box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'colmns'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'colmns'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 21, in <module>
+    obj.initiate_data_validation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 39, in validate_all_columns
+    raise e
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 22, in validate_all_columns
+    all_schema = self.config.all_schema.COLMNS
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'colmns'"
+[2025-08-13 12:24:51,012: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 12:24:51,020: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:24:51,022: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:24:51,025: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:24:51,026: INFO: common: created directory at: artifacts]
+[2025-08-13 12:24:51,027: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 12:24:51,056: ERROR: data_validaton_pipeline: "'ConfigBox' object has no attribute 'columns'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'COLUMNS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 632, in box.box.Box.__getattr__
+  File "box\\box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'COLUMNS'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'COLUMNS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'COLUMNS'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'columns'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 632, in box.box.Box.__getattr__
+  File "box\\box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'columns'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'columns'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 21, in <module>
+    obj.initiate_data_validation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 39, in validate_all_columns
+    raise e
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 22, in validate_all_columns
+    all_schema = self.config.all_schema.COLUMNS
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'columns'"
+[2025-08-13 12:45:25,116: INFO: data_transformation_pipeline: Data Trnasformation Stage started]
+[2025-08-13 12:45:25,413: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:45:25,562: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:45:25,703: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:45:25,717: INFO: common: created directory at: artifacts]
+[2025-08-13 12:45:25,761: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 12:45:25,830: INFO: data_transformation_pipeline: Data Trnasformation Stage completed]
+[2025-08-13 12:49:28,638: INFO: data_transformation_pipeline: Data Trnasformation Stage started]
+[2025-08-13 12:49:28,648: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:49:28,660: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:49:28,665: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:49:28,667: INFO: common: created directory at: artifacts]
+[2025-08-13 12:49:28,668: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 12:49:28,670: INFO: data_transformation_pipeline: Data Trnasformation Stage completed]
+[2025-08-13 12:50:37,368: INFO: data_transformation_pipeline: Data Trnasformation Stage started]
+[2025-08-13 12:50:37,382: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:50:37,386: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:50:37,389: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:50:37,391: INFO: common: created directory at: artifacts]
+[2025-08-13 12:50:37,399: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 12:50:37,404: INFO: data_transformation_pipeline: Data Trnasformation Stage completed]
+[2025-08-13 12:51:34,701: INFO: data_transformation_pipeline: Data Trnasformation Stage started]
+[2025-08-13 12:51:34,721: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:51:34,784: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:51:34,789: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:51:34,792: INFO: common: created directory at: artifacts]
+[2025-08-13 12:51:34,795: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 12:51:34,885: ERROR: data_transformation: Error occurred during data transformation: 'target']
+Traceback (most recent call last):
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\indexes\base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'target'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_transformation.py", line 26, in train_test_splitting
+    txt['target']=l.fit_transform(txt['target'])
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\indexes\base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'target'
+[2025-08-13 12:51:34,954: INFO: data_transformation_pipeline: Data Trnasformation Stage completed]
+[2025-08-13 12:55:54,492: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 12:55:54,526: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:55:54,537: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:55:54,542: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:55:54,543: INFO: common: created directory at: artifacts]
+[2025-08-13 12:55:54,544: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 12:55:54,589: INFO: data_validation: all columns: ['target', 'text']]
+[2025-08-13 12:55:54,589: INFO: data_validation: all schema: dict_keys(['target', 'text'])]
+[2025-08-13 12:55:54,589: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 12:56:55,305: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 12:56:55,319: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 12:56:55,322: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 12:56:55,325: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 12:56:55,327: INFO: common: created directory at: artifacts]
+[2025-08-13 12:56:55,328: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 12:56:55,369: INFO: data_validation: all columns: ['target', 'text']]
+[2025-08-13 12:56:55,369: INFO: data_validation: all schema: dict_keys(['target', 'text'])]
+[2025-08-13 12:56:55,369: ERROR: data_validaton_pipeline: 'DataValidationConfig' object has no attribute 'validated_data_path']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 21, in <module>
+    obj.initiate_data_validation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 42, in validate_all_columns
+    raise e
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 37, in validate_all_columns
+    data.to_csv(self.config.validated_data_path, index=False)
+AttributeError: 'DataValidationConfig' object has no attribute 'validated_data_path'
+[2025-08-13 13:00:10,293: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 13:00:10,313: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 13:00:10,337: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 13:00:10,337: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 13:00:10,348: INFO: common: created directory at: artifacts]
+[2025-08-13 13:00:10,350: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 13:00:10,439: INFO: data_validation: all columns: ['target', 'text']]
+[2025-08-13 13:00:10,439: INFO: data_validation: all schema: dict_keys(['target', 'text'])]
+[2025-08-13 13:00:10,514: ERROR: data_validaton_pipeline: 'DataValidationConfig' object has no attribute 'validated_data_path']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 21, in <module>
+    obj.initiate_data_validation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\data_validaton_pipeline.py", line 15, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 41, in validate_all_columns
+    raise e
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\data_validation.py", line 37, in validate_all_columns
+    logger.info(f"Data validation completed successfully. Validated data saved at: {self.config.validated_data_path}")
+AttributeError: 'DataValidationConfig' object has no attribute 'validated_data_path'
+[2025-08-13 13:01:14,797: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 13:01:14,806: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 13:01:14,811: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 13:01:14,815: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 13:01:14,817: INFO: common: created directory at: artifacts]
+[2025-08-13 13:01:14,818: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 13:01:14,874: INFO: data_validation: all columns: ['target', 'text']]
+[2025-08-13 13:01:14,874: INFO: data_validation: all schema: dict_keys(['target', 'text'])]
+[2025-08-13 13:01:14,992: INFO: data_validation: Data validation completed successfully. Validated data saved at: artifacts/data_validation/validated_data.csv]
+[2025-08-13 13:01:14,997: INFO: data_validaton_pipeline: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 13:03:49,045: INFO: data_transformation_pipeline: Data Trnasformation Stage started]
+[2025-08-13 13:03:49,055: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 13:03:49,064: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 13:03:49,069: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 13:03:49,072: INFO: common: created directory at: artifacts]
+[2025-08-13 13:03:49,073: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 13:03:51,215: INFO: data_transformation: nltk data downloaded successfully]
+[2025-08-13 13:03:54,365: INFO: data_transformation: Number of words in each text column calculated]
+[2025-08-13 13:03:54,373: INFO: data_transformation: Number of characters in each text column calculated]
+[2025-08-13 13:03:56,167: INFO: data_transformation: Plotting the distribution of number of words and characters in each text column]
+[2025-08-13 13:05:00,294: INFO: data_transformation: Text column transformed using nltk]
+[2025-08-13 13:05:00,294: INFO: data_transformation: New text column created by joining the transformed text]
+[2025-08-13 13:05:00,312: INFO: data_transformation: Dataframe created with target and new text column]
+[2025-08-13 13:05:00,373: INFO: data_transformation: Transformed data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 13:05:00,376: INFO: data_transformation: transofmation completed and data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 13:05:00,388: INFO: data_transformation_pipeline: Data Trnasformation Stage completed]
+[2025-08-13 13:08:26,530: INFO: data_transformation_pipeline: Data Trnasformation Stage started]
+[2025-08-13 13:08:26,538: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 13:08:26,552: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 13:08:26,555: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 13:08:26,556: INFO: common: created directory at: artifacts]
+[2025-08-13 13:08:26,556: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 13:08:28,095: INFO: data_transformation: nltk data downloaded successfully]
+[2025-08-13 13:08:31,006: INFO: data_transformation: Number of words in each text column calculated]
+[2025-08-13 13:08:31,016: INFO: data_transformation: Number of characters in each text column calculated]
+[2025-08-13 13:08:31,304: INFO: data_transformation: Plotting the distribution of number of words and characters in each text column]
+[2025-08-13 13:08:32,056: INFO: data_transformation: Plot saved at: artifacts/data_transformation\word_char_distribution.png]
+[2025-08-13 13:09:26,728: INFO: data_transformation: Text column transformed using nltk]
+[2025-08-13 13:09:26,728: INFO: data_transformation: New text column created by joining the transformed text]
+[2025-08-13 13:09:26,755: INFO: data_transformation: Dataframe created with target and new text column]
+[2025-08-13 13:09:26,812: INFO: data_transformation: Transformed data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 13:09:26,812: INFO: data_transformation: transofmation completed and data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 13:09:26,819: INFO: data_transformation_pipeline: Data Trnasformation Stage completed]
+[2025-08-13 14:20:05,328: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:20:05,371: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:20:05,396: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:20:05,419: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:20:05,419: INFO: common: created directory at: artifacts]
+[2025-08-13 14:20:05,419: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:20:05,419: ERROR: model_trainer_pipeline: ModelTrainerConfig.__init__() got an unexpected keyword argument 'language']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 23, in <module>
+    obj.initiate_model_training()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 14, in initiate_model_training
+    model_trainer_config = config.get_model_trainer_config()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\config\configuration.py", line 63, in get_model_trainer_config
+    model_trainer_config = ModelTrainerConfig(
+TypeError: ModelTrainerConfig.__init__() got an unexpected keyword argument 'language'
+[2025-08-13 14:22:36,240: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:22:36,255: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:22:36,263: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:22:36,263: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:22:36,263: INFO: common: created directory at: artifacts]
+[2025-08-13 14:22:36,271: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:22:36,271: INFO: model_trainer: Training the model]
+[2025-08-13 14:22:36,271: ERROR: model_trainer_pipeline: 'ModelTrainerConfig' object has no attribute 'transformed_data_path']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 23, in <module>
+    obj.initiate_model_training()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_training
+    model_trainer_config.train()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_trainer.py", line 15, in train
+    df = pd.read_csv(self.config.transformed_data_path)
+AttributeError: 'ModelTrainerConfig' object has no attribute 'transformed_data_path'
+[2025-08-13 14:26:23,907: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:26:23,920: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:26:23,924: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:26:23,924: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:26:23,931: INFO: common: created directory at: artifacts]
+[2025-08-13 14:26:23,931: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:26:23,931: INFO: model_trainer: Training the model]
+[2025-08-13 14:26:23,931: ERROR: model_trainer_pipeline: 'ModelTrainerConfig' object has no attribute 'transformed_data_path']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 23, in <module>
+    obj.initiate_model_training()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_training
+    model_trainer_config.train()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_trainer.py", line 15, in train
+    df = pd.read_csv(self.config.transformed_data_path)
+AttributeError: 'ModelTrainerConfig' object has no attribute 'transformed_data_path'
+[2025-08-13 14:31:19,697: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:31:19,709: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:31:19,709: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:31:19,714: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:31:19,714: INFO: common: created directory at: artifacts]
+[2025-08-13 14:31:19,714: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:31:19,718: INFO: model_trainer: Training the model]
+[2025-08-13 14:31:19,765: ERROR: model_trainer_pipeline: 'text']
+Traceback (most recent call last):
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\indexes\base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'text'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 23, in <module>
+    obj.initiate_model_training()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_training
+    model_trainer_config.train()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_trainer.py", line 17, in train
+    x=tfi.fit_transform(df['text']).toarray()
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\indexes\base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'text'
+[2025-08-13 14:32:33,713: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:32:33,723: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:32:33,727: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:32:33,729: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:32:33,729: INFO: common: created directory at: artifacts]
+[2025-08-13 14:32:33,729: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:32:33,729: INFO: model_trainer: Training the model]
+[2025-08-13 14:32:33,756: ERROR: model_trainer_pipeline: np.nan is an invalid document, expected byte or unicode string.]
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 23, in <module>
+    obj.initiate_model_training()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_training
+    model_trainer_config.train()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_trainer.py", line 17, in train
+    x=tfi.fit_transform(df['data']).toarray()
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\sklearn\feature_extraction\text.py", line 2104, in fit_transform
+    X = super().fit_transform(raw_documents)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\sklearn\feature_extraction\text.py", line 1376, in fit_transform
+    vocabulary, X = self._count_vocab(raw_documents, self.fixed_vocabulary_)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\sklearn\feature_extraction\text.py", line 1263, in _count_vocab
+    for feature in analyze(doc):
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\sklearn\feature_extraction\text.py", line 99, in _analyze
+    doc = decoder(doc)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\sklearn\feature_extraction\text.py", line 232, in decode
+    raise ValueError(
+ValueError: np.nan is an invalid document, expected byte or unicode string.
+[2025-08-13 14:39:51,797: INFO: data_transformation_pipeline: Data Trnasformation Stage started]
+[2025-08-13 14:39:51,807: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:39:51,814: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:39:51,816: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:39:51,816: INFO: common: created directory at: artifacts]
+[2025-08-13 14:39:51,816: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 14:39:53,225: INFO: data_transformation: nltk data downloaded successfully]
+[2025-08-13 14:39:55,003: INFO: data_transformation: Number of words in each text column calculated]
+[2025-08-13 14:39:55,003: INFO: data_transformation: Number of characters in each text column calculated]
+[2025-08-13 14:39:56,307: INFO: data_transformation: Plotting the distribution of number of words and characters in each text column]
+[2025-08-13 14:39:56,920: INFO: data_transformation: Plot saved at: artifacts/data_transformation\word_char_distribution.png]
+[2025-08-13 14:40:36,503: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:40:36,513: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:40:36,513: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:40:36,524: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:40:36,524: INFO: common: created directory at: artifacts]
+[2025-08-13 14:40:36,524: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:40:36,524: INFO: model_trainer: Training the model]
+[2025-08-13 14:40:36,549: ERROR: model_trainer_pipeline: ['text']]
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 23, in <module>
+    obj.initiate_model_training()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_training
+    model_trainer_config.train()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_trainer.py", line 17, in train
+    df = df.dropna(subset=['text', 'target'])
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\frame.py", line 6407, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['text']
+[2025-08-13 14:40:40,008: INFO: data_transformation: Text column transformed using nltk]
+[2025-08-13 14:40:40,024: INFO: data_transformation: New text column created by joining the transformed text]
+[2025-08-13 14:40:40,032: INFO: data_transformation: Dataframe created with target and new text column]
+[2025-08-13 14:40:40,082: INFO: data_transformation: Transformed data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 14:40:40,082: INFO: data_transformation: transofmation completed and data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 14:40:40,082: INFO: data_transformation_pipeline: Data Trnasformation Stage completed]
+[2025-08-13 14:41:10,511: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:41:10,511: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:41:10,522: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:41:10,524: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:41:10,524: INFO: common: created directory at: artifacts]
+[2025-08-13 14:41:10,524: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:41:10,528: INFO: model_trainer: Training the model]
+[2025-08-13 14:41:10,565: ERROR: model_trainer_pipeline: 'text']
+Traceback (most recent call last):
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\indexes\base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'text'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 23, in <module>
+    obj.initiate_model_training()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_training
+    model_trainer_config.train()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_trainer.py", line 19, in train
+    x = tfi.fit_transform(df['text']).toarray()
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\pandas\core\indexes\base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'text'
+[2025-08-13 14:41:29,243: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:41:29,253: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:41:29,263: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:41:29,266: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:41:29,266: INFO: common: created directory at: artifacts]
+[2025-08-13 14:41:29,266: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:41:29,266: INFO: model_trainer: Training the model]
+[2025-08-13 14:41:29,674: INFO: model_trainer: Model trained and saved at artifacts/model_trainer/model.joblib]
+[2025-08-13 14:41:29,733: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-08-13 14:48:29,064: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 14:48:29,074: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 14:48:29,076: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 14:48:29,076: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 14:48:29,076: INFO: common: created directory at: artifacts]
+[2025-08-13 14:48:29,076: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 14:48:29,076: INFO: model_trainer: Training the model]
+[2025-08-13 14:48:56,451: INFO: model_trainer: Model trained and saved at artifacts/model_trainer/model.joblib]
+[2025-08-13 14:48:56,545: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]

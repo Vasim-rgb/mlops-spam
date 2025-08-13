@@ -1,0 +1,7 @@
+README.md
+setup.py
+spam_mlops.egg-info/PKG-INFO
+spam_mlops.egg-info/SOURCES.txt
+spam_mlops.egg-info/dependency_links.txt
+spam_mlops.egg-info/requires.txt
+spam_mlops.egg-info/top_level.txt

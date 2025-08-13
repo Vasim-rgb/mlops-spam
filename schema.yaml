@@ -1,0 +1,5 @@
+COLUMNS:
+ target: object
+ text: object
+TARGET_COLUMN: target
+TEXT_COLUMN: text
