@@ -184,3 +184,5 @@ src/.DS_Store
 
 
 pred/
+*.dvc/
+.dvcignore
