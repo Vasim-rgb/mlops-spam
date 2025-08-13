@@ -1,5 +1,5 @@
 # Ignore artifacts in Git, but allow DVC metadata
-
+artifacts/
 venv/
 logs/
 

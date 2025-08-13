@@ -848,3 +848,1635 @@ x==========x]
 [2025-08-13 14:48:56,545: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage completed <<<<<<
 
 x==========x]
+[2025-08-13 15:35:33,640: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 15:35:33,660: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 15:35:33,672: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 15:35:33,672: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 15:35:33,682: INFO: common: created directory at: artifacts]
+[2025-08-13 15:35:33,682: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 15:35:33,682: INFO: model_trainer: Training the model]
+[2025-08-13 15:35:35,173: INFO: model_trainer: Model trained and saved at artifacts/model_trainer/model.joblib]
+[2025-08-13 15:35:35,239: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-08-13 16:09:00,396: INFO: model_evaluation_pipeline: >>>>> stage started <<<<<]
+[2025-08-13 16:09:00,396: INFO: model_evaluation_pipeline: Model evaluation stage started]
+[2025-08-13 16:09:00,427: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 16:09:00,435: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 16:09:00,439: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 16:09:00,439: INFO: common: created directory at: artifacts]
+[2025-08-13 16:09:00,441: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-08-13 16:09:00,442: INFO: model_evalation: evaluating the model]
+[2025-08-13 16:09:01,931: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:09:01,945: INFO: helpers: Accessing as Vasim-rgb]
+[2025-08-13 16:09:02,781: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/vasim-rgb/mlops-spam "HTTP/1.1 200 OK"]
+[2025-08-13 16:09:03,637: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:09:03,637: INFO: helpers: Initialized MLflow to track repo "vasim-rgb/mlops-spam"]
+[2025-08-13 16:09:03,637: INFO: helpers: Repository vasim-rgb/mlops-spam initialized!]
+[2025-08-13 16:09:04,070: INFO: model_evalation: Model accuracy: 0.9793351302785265]
+[2025-08-13 16:09:04,624: ERROR: model_evaluation_pipeline: API request to endpoint /api/2.0/mlflow/experiments/get-by-name failed with error code 404 != 200. Response body: '<!DOCTYPE html>
+<html lang="en-US">
+  <head data-suburl="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <meta name="referrer" content="no-referrer"/>
+    <meta name="_csrf" content="H14B3piEHlF_GAm7dMvFFCL01iI6MTc1NTA4MTUzNzgzNjk3NTczNA"/>
+    <meta name="_suburl" content=""/>
+    <meta name="_appversion" content="421ac472ca1d3bdf4f6de6aad197a04ebe438e7a" />
+    <meta name="_bareRepo" content=""/>
+
+    
+    
+  <script>(function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PGHTMDN');</script>
+
+    
+
+    
+    
+      
+    
+    
+  
+    <title>Page Not Found · DagsHub</title>
+    <meta name="description"
+          content="DagsHub is where people build machine learning projects. DagsHub helps AI teams build better models and manage their data effectively."/>
+  
+  
+  <meta property="og:url" content="https://dagshub.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="DagsHub">
+  <meta property="og:title" content="DagsHub: The Home for Machine Learning Collaboration">
+  <meta property="og:description"
+        content="DagsHub is where people build machine learning projects. DagsHub helps AI teams build better models and manage their data effectively.">
+  <meta property="og:image" content="https://dagshub.com/img/open_graph/dagshub-logo.jpg"/>
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  
+  <meta property="twitter:site" content="@TheRealDagsHub">
+  <meta property="twitter:creator" content="@TheRealDagsHub">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="DagsHub: The Home for Machine Learning Collaboration">
+  <meta property="twitter:description"
+        content="DagsHub is where people build machine learning projects. DagsHub helps AI teams build better models and manage their data effectively.">
+  <meta property="twitter:image:src" content="https://dagshub.com/img/open_graph/dagshub-logo.jpg">
+  <meta property="twitter:image:width" content="1200">
+  <meta property="twitter:image:height" content="630">
+
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "DagsHub",
+        "url": "https://dagshub.com/",
+        "sameAs": [
+            "https://www.facebook.com/DagsHub/",
+            "https://twitter.com/TheRealDagsHub/",
+            "https://linkedin.com/company/dagshub/"
+        ],
+        "potentialAction": {
+        "@type": "SearchAction",
+        "description": "Search for data science projects on DagsHub.",
+        "target": "https://dagshub.com/explore/repos?q={search_term}",
+        "query-input": "required name=search_term"
+        }
+    }
+  </script>
+
+
+    
+
+    <link rel="shortcut icon" href="/img/favicon-black.svg"/>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+        integrity="sha512-3icgkoIO5qm2D4bGSUkPqeQ96LS8+ukJC7Eqhl1H5B2OJMEnFqLmNDxXVmtV/eq5M65tTDkUYS/Q0P4gvZv+yA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="/assets/octicons-4.3.0/octicons.min.css">
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    <link rel="preload" href="/css/themes/default/assets/fonts/brand-icons.woff2" as="font"
+          type="font/woff2" crossorigin/>
+    <link rel="preload" href="/css/themes/default/assets/fonts/icons.woff2" as="font" type="font/woff2"
+          crossorigin/>
+    <link rel="preload" href="/assets/fontawesome-5.15.3/webfonts/fa-solid-900.woff2" as="font"
+          type="font/woff2" crossorigin/>
+
+    
+    <link rel="stylesheet" href="/css/semantic-2.4.2.min.css">
+
+    
+    <link rel="stylesheet" href="/css/build/dagshub.css?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a">
+    <link rel="stylesheet" href="/css/gogs.css?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a">
+
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lato:300,400,700,900|Jaldi|Open+Sans&display=swap" rel="stylesheet">
+    
+
+    <noscript>
+      <style>
+        .dropdown:hover > .menu {
+          display: block;
+        }
+
+        .ui.secondary.menu .dropdown.item > .menu {
+          margin-top: 0;
+        }
+      </style>
+    </noscript>
+    <script src="/js/semantic-2.4.2.min.js"></script>
+
+    
+    
+      <link rel="stylesheet" href="/css/build/static_dagshub.css?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Fira Code:wght@300;400;500;600;700;900' rel='stylesheet'>
+      
+    
+
+    <meta name="theme-color" content="#103037">
+
+    
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
+    
+  </head>
+  <body>
+
+    
+
+
+
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGHTMDN"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+
+
+
+<div class="ui tiny modal" id="contact-modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Contact us
+  </div>
+  <form id="contact-form" class="ui form content" action="contact_form" method="post">
+    <input type="hidden" name="_csrf" value="H14B3piEHlF_GAm7dMvFFCL01iI6MTc1NTA4MTUzNzgzNjk3NTczNA">
+    <div class="required field">
+      <label for="user_name">Your email address</label>
+      <input name="email" type="email" value=""
+             placeholder="tony@stark-industries.com" required>
+    </div>
+    <div class="required field">
+      <label for="subject">Subject</label>
+      <input name="subject" value="Hi DagsHub, let's talk" placeholder="What would you like to talk about?" required>
+    </div>
+    <div class="required field">
+      <textarea class="autosize" name="body" rows="7" ></textarea>
+    </div>
+    
+      <script type="text/javascript">
+        var myRecaptchaListeners = {
+          callAllListeners: function(listeners) {
+            return () => listeners.forEach((f) => f());
+          },
+          successListeners: [],
+          expireListeners: [],
+        };
+        contactFormCaptchaCallback = myRecaptchaListeners.callAllListeners(myRecaptchaListeners.successListeners);
+        contactFormCaptchaExpired = myRecaptchaListeners.callAllListeners(myRecaptchaListeners.expireListeners);
+      </script>
+      <div class="g-recaptcha field"
+           data-sitekey="6Lf0Z7gUAAAAAKCsW1V-PqN58BcBNAUxe-oIU3nw"
+           data-callback="contactFormCaptchaCallback"
+           data-expired-callback="contactFormCaptchaExpired"></div>
+    
+    <input type="hidden" name="page"/>
+    <input type="hidden" name="referring_page"/>
+    <input type="hidden" name="referrer"/>
+    <button class="ui positive center aligned labeled icon button" id="send-contact-request-btn">
+      Send
+      <i class="checkmark icon"></i>
+    </button>
+    
+      <script type="text/javascript">
+        (function() {
+          const submitBtn = document.getElementById('send-contact-request-btn');
+          onExpire = () => submitBtn.style.display = 'none';
+          onExpire();
+          myRecaptchaListeners.successListeners.push(() => {
+            submitBtn.style.display = 'block';
+          });
+          myRecaptchaListeners.expireListeners.push(onExpire);
+        })();
+      </script>
+    
+    <div class="ui hidden dimmer inverted">
+      <div class="ui loader"></div>
+      <div class="ui hidden positive message">
+        <p>Thank you! We'll be in touch ASAP.</p>
+      </div>
+      <div class="ui hidden negative message">
+        <p>Something went wrong, please try again or contact us directly at <a
+                  href="mailto:contact@dagshub.com">contact@dagshub.com</a></p>
+      </div>
+    </div>
+  </form>
+  <script>
+    (function() {
+      const $contactModal = $('#contact-modal');
+      const $contactForm = $('#contact-form');
+      const $dimmer = $contactForm.find('.dimmer');
+      const $loader = $dimmer.find('.loader');
+      const $okMsg = $dimmer.find('.positive');
+      const $errorMsg = $dimmer.find('.negative');
+
+      $contactForm.find('input[name=page]').val(document.URL);
+      $contactForm.find('input[name=referring_page]').val(new URL(document.URL).searchParams.get('referring_page'));
+      $contactForm.find('input[name=referrer]').val(document.referrer);
+
+      
+      $contactModal.modal({
+        onShow: () => {
+          $dimmer.dimmer('hide');
+          $loader.transition('fade in', 0);
+          $okMsg.transition('fade out', 0);
+          $errorMsg.transition('fade out', 0);
+        }
+      });
+
+      $contactForm.submit((e) => {
+        e.preventDefault();
+
+        $dimmer.dimmer('show');
+
+        function hideModal() {
+          setTimeout(() => {
+            $contactModal.modal('hide');
+          }, 3000);
+        }
+
+        
+        const loaderToMessage = function(targetMsg = $okMsg, afterMsg = hideModal) {
+          $loader.transition('fade out');
+          targetMsg.transition('fade in');
+          if (afterMsg) afterMsg();
+        };
+
+        $.ajax({
+          url: $contactForm.attr('action'),
+          method: 'post',
+          data: $contactForm.serialize(),
+          success: () => loaderToMessage(),
+          error: e => {
+            console.error(e);
+            
+            loaderToMessage($errorMsg, null);
+          }
+        });
+        
+        
+        
+        
+      });
+    })();
+  </script>
+  
+  <div class="ui secondary segment">
+    Or if you want, you can join our community at <a href="https://discord.com/invite/9gU36Y6"
+                                                     class="ui basic discord icon"><i class="discord grey icon big"></i></a>
+  </div>
+  
+</div>
+
+
+
+    
+      
+
+<div class="mobile dagshub-navbar">
+    <div class="line-divider"></div>
+
+
+
+
+  
+    
+      <div class="primary center button" style="margin-bottom: 10px;">
+        <a  id="sign-up-navbar-mobile" data-analytics-event="Navbar_Register_Clicked"
+            href="/user/sign_up?redirect_to=%2fVasim-rgb%2fapi%2f2.0%2fmlflow%2fexperiments%2fget-by-name
+
+">
+          Register
+        </a>
+      </div>
+    
+      <div class="secondary center button">
+        <a id="sign-in-navbar-mobile" data-analytics-event="Navbar_Login_Clicked"
+           href="/user/login?redirect_to=%2fVasim-rgb%2fapi%2f2.0%2fmlflow%2fexperiments%2fget-by-name
+
+">
+          Login
+        </a>
+      </div>
+  
+  <div class="line-divider"></div>
+  
+  
+    <div class="subtitle">Resources</div>
+    <a class="navbar-item"
+       href="/docs" onclick="trackAnalyticsEvent('Resources_Docs_Clicked')">Docs</a>
+    <a class="navbar-item" href="/blog" onclick="trackAnalyticsEvent('Resources_Blog_Clicked')">Blog</a>
+    <a class="navbar-item" data-analytics-event="Resources_Datasets_Clicked" href="/datasets">Datasets</a>
+    <a class="navbar-item" data-analytics-event="Resources_Glossary_Clicked" href="/glossary">Glossary</a>
+    <a class="navbar-item" href="/blog/tag/case-study" onclick="trackAnalyticsEvent('Resources_Case_Studies_Clicked')">Case Studies</a>
+    <a class="navbar-item" href="/blog/tag/tutorials" onclick="trackAnalyticsEvent('Resources_Tutorials_Clicked')">Tutorials &amp; Webinars</a>
+    
+      <div class="line-divider"></div>
+      <div class="subtitle">Product</div>
+      <a class="navbar-item" tabindex="0" href="/data-engine">Data Engine</a>
+      <a class="navbar-item" tabindex="0" href="/use-cases/llm">LLMs</a>
+      <a class="navbar-item" tabindex="0" href="/product">Platform</a>
+      <a class="navbar-item" tabindex="0" href="/enterprise">Enterprise</a>
+    
+    <div class="line-divider"></div>
+    <a class="navbar-item" href="/pricing">Pricing</a>
+  
+  <a class="navbar-item" href="/explore/repos">Explore</a>
+  
+  <div class="line-divider"></div>
+  <a class="navbar-item" href="https://discord.com/invite/9gU36Y6" onclick="trackAnalyticsEvent('DiscordIcon_Clicked')">
+    <img src="/assets/social_icons/discord.svg" aria-label="Connect to our Discord channel">
+    <span>Connect to our Discord channel</span>
+  </a>
+  
+    
+</div>
+<div class="pusher">
+<div class="ui full height">
+  <noscript>This website works better with JavaScript</noscript>
+  
+    <div class=" navbar-container">
+      <div id="menu-container" class="dagshub-navbar ">
+        <div class="left-menu">
+          <div class="fixed-content">
+            <a href="https://dagshub.com/" tabindex="0">
+              
+              <img width="34" height="30" alt="DagsHub navbar logo" aria-label="DagsHub Home" class="navbar-logo"
+                   src="/img/favicon.svg">
+              
+            </a>
+            <form class="search-bar-container" action="/explore/repos">
+                <input class="search-bar" name="q" value="" aria-label="Search public projects"
+                       placeholder="Search public repositories..." tabindex="0" autocomplete="off">
+            </form>
+          </div>
+          
+          
+            <div class="dropdown navbar-item" tabindex="0">
+              Resources &nbsp; <img class="flip" src="/assets/chevron-icon.svg">
+                <div class="submenu">
+                  <a href="/docs" tabindex="0" onclick="trackAnalyticsEvent('Resources_Docs_Clicked')">Docs</a>
+                  <a href="/blog" tabindex="0" onclick="trackAnalyticsEvent('Resources_Blog_Clicked')">Blog</a>
+                  <a href="/datasets" tabindex="0" data-analytics-event="Resources_Datasets_Clicked">Datasets</a>
+                  <a href="/glossary" tabindex="0" data-analytics-event="Resources_Glossary_Clicked">Glossary</a>
+                  <a href="/blog/tag/case-study" tabindex="0" onclick="trackAnalyticsEvent('Resources_Case_Studies_Clicked')">Case Studies</a>
+                  <a href="/blog/tag/tutorials" tabindex="0" onclick="trackAnalyticsEvent('Resources_Tutorials_Clicked')">Tutorials &amp; Webinars</a>
+                </div>
+            </div>
+          
+          <a class="navbar-item" tabindex="0"
+             href="/explore/repos" onclick="trackAnalyticsEvent('ExploreTab_Clicked')">Explore</a>
+          
+            <a class="navbar-item" tabindex="0" href="/pricing">Pricing</a>
+          
+          <div class="dropdown navbar-item" tabindex="0">
+            Product &nbsp; <img class="flip" src="/assets/chevron-icon.svg">
+            <div class="submenu">
+              <a class="navbar-item" tabindex="0" href="/data-engine">Data Engine</a>
+              <a class="navbar-item" tabindex="0" href="/use-cases/llm">LLMs</a>
+              <a class="navbar-item" tabindex="0" href="/product">Platform</a>
+              <a class="navbar-item" tabindex="0" href="/enterprise">Enterprise</a>
+            </div>
+          </div>
+          
+        
+        </div>
+        
+          <input type="checkbox" id="menu-toggle" style="display: none;" tabindex="0">
+          <label id="menu-toggle-label" for="menu-toggle"><img src="/assets/menu-open.svg"></label>
+          <div id="menu-close-label" style="display: none;"><img src="/assets/x.svg"></div>
+          <div id="menu-open-label" style="display: none;"><img src="/assets/menu-open.svg"></div>
+        
+        <div class="right-menu">
+            
+            <a aria-label="join our discord"
+               class="navbar-icon dagshub-tooltip"
+               tabindex="0"
+               href="https://discord.com/invite/9gU36Y6" onclick="trackAnalyticsEvent('DiscordIcon_Clicked')">
+              <img src="/assets/social_icons/discord.svg" aria-label="Connect to our Discord channel">
+              <span>Connect to Dagshub Discord channel</span>
+            </a>
+            
+            
+              
+                <div class="primary button">
+                  <a id="sign-up-navbar" data-analytics-event="Navbar_Register_Clicked"
+                     href="/user/sign_up?redirect_to=%2fVasim-rgb%2fapi%2f2.0%2fmlflow%2fexperiments%2fget-by-name
+
+">
+                    Register
+                  </a>
+                </div>
+              
+              <a id="sign-in-navbar" class="secondary button"
+                 data-analytics-event="Navbar_Login_Clicked"
+                 href="/user/login?redirect_to=%2fVasim-rgb%2fapi%2f2.0%2fmlflow%2fexperiments%2fget-by-name
+
+">
+                Login
+              </a>
+            
+        </div>
+      </div>
+    </div>
+  
+
+    
+
+<div class="ui container center">
+  <p style="margin-top: 100px"><img src="/img/404.png" alt="404"/></p>
+  <div class="ui divider"></div>
+  <br>
+  
+
+  
+  <p>
+    If you think this is an error, please report it on our
+    <strong>
+      <a href="https://discord.com/invite/9gU36Y6">Discord support channel <i class="discord icon"></i></a>
+    </strong>
+  </p>
+  Or, contact us at <a href="mailto:support@dagshub.com">support@dagshub.com</a>.</p>
+  
+
+  <br><br>
+  Provide this support ID: <strong>73b3e111d40ccb3a26995bbf83b7ab78</strong>
+</div>
+
+
+</div>
+<footer>
+  <div class="ui footer">
+      <div class="dagshub-footer">
+          <a href="https://dagshub.com/">
+            <img alt="footer DagsHub logo" id="footer-logo" class="ui centered image" aria-label="Dagshub home"
+                           src="/img/footerlogo.svg">
+          </a>
+          
+          <div id="footer-social" class="">
+            <a aria-label="DagsHub on Twitter" class="icon-link"
+               rel="nofollow" target="_blank"
+               href="https://twitter.com/TheRealDAGsHub">
+              <i class="twitter large icon"></i>
+            </a>
+            <a aria-label="DagsHub on YouTube" class="icon-link"
+               rel="nofollow" target="_blank"
+               href="https://youtube.com/c/dagshub">
+              <i class="youtube large icon"></i>
+            </a>
+            <a aria-label="DagsHub on LinkedIn" class="icon-link"
+               rel="nofollow" target="_blank"
+               href="https://www.linkedin.com/company/dagshub">
+              <i class="linkedin large icon"></i>
+            </a>
+            <a aria-label="join our Discord" class="icon-link"
+               rel="nofollow" target="_blank"
+               href="https://discord.com/invite/9gU36Y6">
+              
+              <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.2415 2.18566C18.7257 1.49015 17.1003 0.977731 15.4007 0.684245C15.3698 0.678581 15.3389 0.692736 15.3229 0.721047C15.1139 1.09286 14.8823 1.57791 14.7202 1.95916C12.8922 1.6855 11.0736 1.6855 9.28318 1.95916C9.12099 1.56944 8.88103 1.09286 8.67104 0.721047C8.6551 0.693681 8.62418 0.679525 8.59323 0.684245C6.89465 0.976793 5.26918 1.48921 3.75245 2.18566C3.73932 2.19133 3.72807 2.20077 3.7206 2.21303C0.637438 6.8192 -0.207169 11.3122 0.207167 15.7494C0.209041 15.7711 0.221228 15.7919 0.238101 15.8051C2.27228 17.2989 4.24273 18.2058 6.17659 18.807C6.20754 18.8164 6.24034 18.8051 6.26003 18.7796C6.71749 18.1549 7.12527 17.4962 7.4749 16.8035C7.49553 16.7629 7.47584 16.7148 7.43366 16.6988C6.78686 16.4534 6.17097 16.1542 5.57852 15.8145C5.53166 15.7872 5.52791 15.7201 5.57102 15.688C5.69569 15.5946 5.8204 15.4974 5.93944 15.3993C5.96098 15.3814 5.99099 15.3776 6.01631 15.3889C9.90842 17.1659 14.1221 17.1659 17.9683 15.3889C17.9936 15.3766 18.0236 15.3804 18.0461 15.3983C18.1652 15.4965 18.2898 15.5946 18.4154 15.688C18.4585 15.7201 18.4557 15.7872 18.4089 15.8145C17.8164 16.1608 17.2005 16.4534 16.5528 16.6978C16.5106 16.7139 16.4919 16.7629 16.5125 16.8035C16.8696 17.4952 17.2774 18.1539 17.7264 18.7787C17.7452 18.8051 17.7789 18.8164 17.8099 18.807C19.7531 18.2058 21.7235 17.2989 23.7577 15.8051C23.7755 15.7919 23.7868 15.7721 23.7887 15.7503C24.2845 10.6204 22.9581 6.16429 20.2724 2.21397C20.2659 2.20077 20.2546 2.19133 20.2415 2.18566ZM8.05612 13.0476C6.88433 13.0476 5.91881 11.9718 5.91881 10.6506C5.91881 9.32943 6.86561 8.25364 8.05612 8.25364C9.25598 8.25364 10.2122 9.33887 10.1934 10.6506C10.1934 11.9718 9.2466 13.0476 8.05612 13.0476ZM15.9585 13.0476C14.7867 13.0476 13.8212 11.9718 13.8212 10.6506C13.8212 9.32943 14.768 8.25364 15.9585 8.25364C17.1584 8.25364 18.1145 9.33887 18.0958 10.6506C18.0958 11.9718 17.1584 13.0476 15.9585 13.0476Z"/>
+              </svg>
+            </a>
+          </div>
+          
+        <div class="links">
+          
+          <a class="footer-item" rel="noopener noreferrer" href="/about">Our Story</a>
+          <a class="footer-item" rel="noopener noreferrer" href="/careers">Careers</a>
+              
+          <a id="merch-store" class="footer-item" rel="noopener noreferrer"
+             href="https://teespring.com/stores/dagshub">Merch</a>
+          <a class="footer-item" id="contact-us-footer" href="javascript:">Contact Us</a>
+          <script>
+            (function() {
+              const $contactModal = $('#contact-modal');
+              const $contactForm = $contactModal.find('#contact-form');
+              $contactModal.modal('attach events', '#contact-us-footer', 'show');
+              $('#contact-us-footer').on('click', () => {
+                $contactForm.attr('action', 'contact_form');
+              });
+            })();
+          </script>
+          
+              
+                <a class="footer-item" rel="noopener noreferrer" href="/enterprise">Enterprise</a>
+                <a class="footer-item" rel="noopener noreferrer" href="/pricing">Pricing</a>
+              
+        </div>
+          <h2>The home for data science collaboration</h2>
+          <div class="legal">
+            <p>© Copyright Dagshub 2025</p>
+          
+            <div class="">
+              <a class="footer-item" rel="noopener noreferrer" href="/terms">Terms of Service</a>
+              <a class="footer-item" rel="noopener noreferrer" href="/privacy">Privacy Policy</a>
+            </div>
+          
+            <div>
+              DagsHub Enterprise
+            </div>
+          </div>
+
+        </div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+  </div>
+</footer>
+
+
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/libs/emojify-1.1.0.min.js"></script>
+<script src="/js/libs/clipboard-1.5.9.min.js"></script>
+
+
+
+<script src="/js/gogs.js?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a"></script>
+<script src="/js/dagshub.js?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_evaluation_pipeline.py", line 23, in <module>
+    model_evaluation_pipeline.initiate_model_evaluation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.Evaluate()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_evalation.py", line 38, in Evaluate
+    mlflow.set_experiment("mlops-spam-experiment")
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\fluent.py", line 183, in set_experiment
+    experiment = client.get_experiment_by_name(experiment_name)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 261, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\store\tracking\rest_store.py", line 756, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\store\tracking\rest_store.py", line 133, in _call_endpoint
+    return call_endpoint(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 553, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 314, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/experiments/get-by-name failed with error code 404 != 200. Response body: '<!DOCTYPE html>
+<html lang="en-US">
+  <head data-suburl="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <meta name="referrer" content="no-referrer"/>
+    <meta name="_csrf" content="H14B3piEHlF_GAm7dMvFFCL01iI6MTc1NTA4MTUzNzgzNjk3NTczNA"/>
+    <meta name="_suburl" content=""/>
+    <meta name="_appversion" content="421ac472ca1d3bdf4f6de6aad197a04ebe438e7a" />
+    <meta name="_bareRepo" content=""/>
+
+    
+    
+  <script>(function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PGHTMDN');</script>
+
+    
+
+    
+    
+      
+    
+    
+  
+    <title>Page Not Found · DagsHub</title>
+    <meta name="description"
+          content="DagsHub is where people build machine learning projects. DagsHub helps AI teams build better models and manage their data effectively."/>
+  
+  
+  <meta property="og:url" content="https://dagshub.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="DagsHub">
+  <meta property="og:title" content="DagsHub: The Home for Machine Learning Collaboration">
+  <meta property="og:description"
+        content="DagsHub is where people build machine learning projects. DagsHub helps AI teams build better models and manage their data effectively.">
+  <meta property="og:image" content="https://dagshub.com/img/open_graph/dagshub-logo.jpg"/>
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  
+  <meta property="twitter:site" content="@TheRealDagsHub">
+  <meta property="twitter:creator" content="@TheRealDagsHub">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="DagsHub: The Home for Machine Learning Collaboration">
+  <meta property="twitter:description"
+        content="DagsHub is where people build machine learning projects. DagsHub helps AI teams build better models and manage their data effectively.">
+  <meta property="twitter:image:src" content="https://dagshub.com/img/open_graph/dagshub-logo.jpg">
+  <meta property="twitter:image:width" content="1200">
+  <meta property="twitter:image:height" content="630">
+
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "DagsHub",
+        "url": "https://dagshub.com/",
+        "sameAs": [
+            "https://www.facebook.com/DagsHub/",
+            "https://twitter.com/TheRealDagsHub/",
+            "https://linkedin.com/company/dagshub/"
+        ],
+        "potentialAction": {
+        "@type": "SearchAction",
+        "description": "Search for data science projects on DagsHub.",
+        "target": "https://dagshub.com/explore/repos?q={search_term}",
+        "query-input": "required name=search_term"
+        }
+    }
+  </script>
+
+
+    
+
+    <link rel="shortcut icon" href="/img/favicon-black.svg"/>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+        integrity="sha512-3icgkoIO5qm2D4bGSUkPqeQ96LS8+ukJC7Eqhl1H5B2OJMEnFqLmNDxXVmtV/eq5M65tTDkUYS/Q0P4gvZv+yA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="/assets/octicons-4.3.0/octicons.min.css">
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    <link rel="preload" href="/css/themes/default/assets/fonts/brand-icons.woff2" as="font"
+          type="font/woff2" crossorigin/>
+    <link rel="preload" href="/css/themes/default/assets/fonts/icons.woff2" as="font" type="font/woff2"
+          crossorigin/>
+    <link rel="preload" href="/assets/fontawesome-5.15.3/webfonts/fa-solid-900.woff2" as="font"
+          type="font/woff2" crossorigin/>
+
+    
+    <link rel="stylesheet" href="/css/semantic-2.4.2.min.css">
+
+    
+    <link rel="stylesheet" href="/css/build/dagshub.css?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a">
+    <link rel="stylesheet" href="/css/gogs.css?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a">
+
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lato:300,400,700,900|Jaldi|Open+Sans&display=swap" rel="stylesheet">
+    
+
+    <noscript>
+      <style>
+        .dropdown:hover > .menu {
+          display: block;
+        }
+
+        .ui.secondary.menu .dropdown.item > .menu {
+          margin-top: 0;
+        }
+      </style>
+    </noscript>
+    <script src="/js/semantic-2.4.2.min.js"></script>
+
+    
+    
+      <link rel="stylesheet" href="/css/build/static_dagshub.css?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Fira Code:wght@300;400;500;600;700;900' rel='stylesheet'>
+      
+    
+
+    <meta name="theme-color" content="#103037">
+
+    
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
+    
+  </head>
+  <body>
+
+    
+
+
+
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGHTMDN"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+
+
+
+<div class="ui tiny modal" id="contact-modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Contact us
+  </div>
+  <form id="contact-form" class="ui form content" action="contact_form" method="post">
+    <input type="hidden" name="_csrf" value="H14B3piEHlF_GAm7dMvFFCL01iI6MTc1NTA4MTUzNzgzNjk3NTczNA">
+    <div class="required field">
+      <label for="user_name">Your email address</label>
+      <input name="email" type="email" value=""
+             placeholder="tony@stark-industries.com" required>
+    </div>
+    <div class="required field">
+      <label for="subject">Subject</label>
+      <input name="subject" value="Hi DagsHub, let's talk" placeholder="What would you like to talk about?" required>
+    </div>
+    <div class="required field">
+      <textarea class="autosize" name="body" rows="7" ></textarea>
+    </div>
+    
+      <script type="text/javascript">
+        var myRecaptchaListeners = {
+          callAllListeners: function(listeners) {
+            return () => listeners.forEach((f) => f());
+          },
+          successListeners: [],
+          expireListeners: [],
+        };
+        contactFormCaptchaCallback = myRecaptchaListeners.callAllListeners(myRecaptchaListeners.successListeners);
+        contactFormCaptchaExpired = myRecaptchaListeners.callAllListeners(myRecaptchaListeners.expireListeners);
+      </script>
+      <div class="g-recaptcha field"
+           data-sitekey="6Lf0Z7gUAAAAAKCsW1V-PqN58BcBNAUxe-oIU3nw"
+           data-callback="contactFormCaptchaCallback"
+           data-expired-callback="contactFormCaptchaExpired"></div>
+    
+    <input type="hidden" name="page"/>
+    <input type="hidden" name="referring_page"/>
+    <input type="hidden" name="referrer"/>
+    <button class="ui positive center aligned labeled icon button" id="send-contact-request-btn">
+      Send
+      <i class="checkmark icon"></i>
+    </button>
+    
+      <script type="text/javascript">
+        (function() {
+          const submitBtn = document.getElementById('send-contact-request-btn');
+          onExpire = () => submitBtn.style.display = 'none';
+          onExpire();
+          myRecaptchaListeners.successListeners.push(() => {
+            submitBtn.style.display = 'block';
+          });
+          myRecaptchaListeners.expireListeners.push(onExpire);
+        })();
+      </script>
+    
+    <div class="ui hidden dimmer inverted">
+      <div class="ui loader"></div>
+      <div class="ui hidden positive message">
+        <p>Thank you! We'll be in touch ASAP.</p>
+      </div>
+      <div class="ui hidden negative message">
+        <p>Something went wrong, please try again or contact us directly at <a
+                  href="mailto:contact@dagshub.com">contact@dagshub.com</a></p>
+      </div>
+    </div>
+  </form>
+  <script>
+    (function() {
+      const $contactModal = $('#contact-modal');
+      const $contactForm = $('#contact-form');
+      const $dimmer = $contactForm.find('.dimmer');
+      const $loader = $dimmer.find('.loader');
+      const $okMsg = $dimmer.find('.positive');
+      const $errorMsg = $dimmer.find('.negative');
+
+      $contactForm.find('input[name=page]').val(document.URL);
+      $contactForm.find('input[name=referring_page]').val(new URL(document.URL).searchParams.get('referring_page'));
+      $contactForm.find('input[name=referrer]').val(document.referrer);
+
+      
+      $contactModal.modal({
+        onShow: () => {
+          $dimmer.dimmer('hide');
+          $loader.transition('fade in', 0);
+          $okMsg.transition('fade out', 0);
+          $errorMsg.transition('fade out', 0);
+        }
+      });
+
+      $contactForm.submit((e) => {
+        e.preventDefault();
+
+        $dimmer.dimmer('show');
+
+        function hideModal() {
+          setTimeout(() => {
+            $contactModal.modal('hide');
+          }, 3000);
+        }
+
+        
+        const loaderToMessage = function(targetMsg = $okMsg, afterMsg = hideModal) {
+          $loader.transition('fade out');
+          targetMsg.transition('fade in');
+          if (afterMsg) afterMsg();
+        };
+
+        $.ajax({
+          url: $contactForm.attr('action'),
+          method: 'post',
+          data: $contactForm.serialize(),
+          success: () => loaderToMessage(),
+          error: e => {
+            console.error(e);
+            
+            loaderToMessage($errorMsg, null);
+          }
+        });
+        
+        
+        
+        
+      });
+    })();
+  </script>
+  
+  <div class="ui secondary segment">
+    Or if you want, you can join our community at <a href="https://discord.com/invite/9gU36Y6"
+                                                     class="ui basic discord icon"><i class="discord grey icon big"></i></a>
+  </div>
+  
+</div>
+
+
+
+    
+      
+
+<div class="mobile dagshub-navbar">
+    <div class="line-divider"></div>
+
+
+
+
+  
+    
+      <div class="primary center button" style="margin-bottom: 10px;">
+        <a  id="sign-up-navbar-mobile" data-analytics-event="Navbar_Register_Clicked"
+            href="/user/sign_up?redirect_to=%2fVasim-rgb%2fapi%2f2.0%2fmlflow%2fexperiments%2fget-by-name
+
+">
+          Register
+        </a>
+      </div>
+    
+      <div class="secondary center button">
+        <a id="sign-in-navbar-mobile" data-analytics-event="Navbar_Login_Clicked"
+           href="/user/login?redirect_to=%2fVasim-rgb%2fapi%2f2.0%2fmlflow%2fexperiments%2fget-by-name
+
+">
+          Login
+        </a>
+      </div>
+  
+  <div class="line-divider"></div>
+  
+  
+    <div class="subtitle">Resources</div>
+    <a class="navbar-item"
+       href="/docs" onclick="trackAnalyticsEvent('Resources_Docs_Clicked')">Docs</a>
+    <a class="navbar-item" href="/blog" onclick="trackAnalyticsEvent('Resources_Blog_Clicked')">Blog</a>
+    <a class="navbar-item" data-analytics-event="Resources_Datasets_Clicked" href="/datasets">Datasets</a>
+    <a class="navbar-item" data-analytics-event="Resources_Glossary_Clicked" href="/glossary">Glossary</a>
+    <a class="navbar-item" href="/blog/tag/case-study" onclick="trackAnalyticsEvent('Resources_Case_Studies_Clicked')">Case Studies</a>
+    <a class="navbar-item" href="/blog/tag/tutorials" onclick="trackAnalyticsEvent('Resources_Tutorials_Clicked')">Tutorials &amp; Webinars</a>
+    
+      <div class="line-divider"></div>
+      <div class="subtitle">Product</div>
+      <a class="navbar-item" tabindex="0" href="/data-engine">Data Engine</a>
+      <a class="navbar-item" tabindex="0" href="/use-cases/llm">LLMs</a>
+      <a class="navbar-item" tabindex="0" href="/product">Platform</a>
+      <a class="navbar-item" tabindex="0" href="/enterprise">Enterprise</a>
+    
+    <div class="line-divider"></div>
+    <a class="navbar-item" href="/pricing">Pricing</a>
+  
+  <a class="navbar-item" href="/explore/repos">Explore</a>
+  
+  <div class="line-divider"></div>
+  <a class="navbar-item" href="https://discord.com/invite/9gU36Y6" onclick="trackAnalyticsEvent('DiscordIcon_Clicked')">
+    <img src="/assets/social_icons/discord.svg" aria-label="Connect to our Discord channel">
+    <span>Connect to our Discord channel</span>
+  </a>
+  
+    
+</div>
+<div class="pusher">
+<div class="ui full height">
+  <noscript>This website works better with JavaScript</noscript>
+  
+    <div class=" navbar-container">
+      <div id="menu-container" class="dagshub-navbar ">
+        <div class="left-menu">
+          <div class="fixed-content">
+            <a href="https://dagshub.com/" tabindex="0">
+              
+              <img width="34" height="30" alt="DagsHub navbar logo" aria-label="DagsHub Home" class="navbar-logo"
+                   src="/img/favicon.svg">
+              
+            </a>
+            <form class="search-bar-container" action="/explore/repos">
+                <input class="search-bar" name="q" value="" aria-label="Search public projects"
+                       placeholder="Search public repositories..." tabindex="0" autocomplete="off">
+            </form>
+          </div>
+          
+          
+            <div class="dropdown navbar-item" tabindex="0">
+              Resources &nbsp; <img class="flip" src="/assets/chevron-icon.svg">
+                <div class="submenu">
+                  <a href="/docs" tabindex="0" onclick="trackAnalyticsEvent('Resources_Docs_Clicked')">Docs</a>
+                  <a href="/blog" tabindex="0" onclick="trackAnalyticsEvent('Resources_Blog_Clicked')">Blog</a>
+                  <a href="/datasets" tabindex="0" data-analytics-event="Resources_Datasets_Clicked">Datasets</a>
+                  <a href="/glossary" tabindex="0" data-analytics-event="Resources_Glossary_Clicked">Glossary</a>
+                  <a href="/blog/tag/case-study" tabindex="0" onclick="trackAnalyticsEvent('Resources_Case_Studies_Clicked')">Case Studies</a>
+                  <a href="/blog/tag/tutorials" tabindex="0" onclick="trackAnalyticsEvent('Resources_Tutorials_Clicked')">Tutorials &amp; Webinars</a>
+                </div>
+            </div>
+          
+          <a class="navbar-item" tabindex="0"
+             href="/explore/repos" onclick="trackAnalyticsEvent('ExploreTab_Clicked')">Explore</a>
+          
+            <a class="navbar-item" tabindex="0" href="/pricing">Pricing</a>
+          
+          <div class="dropdown navbar-item" tabindex="0">
+            Product &nbsp; <img class="flip" src="/assets/chevron-icon.svg">
+            <div class="submenu">
+              <a class="navbar-item" tabindex="0" href="/data-engine">Data Engine</a>
+              <a class="navbar-item" tabindex="0" href="/use-cases/llm">LLMs</a>
+              <a class="navbar-item" tabindex="0" href="/product">Platform</a>
+              <a class="navbar-item" tabindex="0" href="/enterprise">Enterprise</a>
+            </div>
+          </div>
+          
+        
+        </div>
+        
+          <input type="checkbox" id="menu-toggle" style="display: none;" tabindex="0">
+          <label id="menu-toggle-label" for="menu-toggle"><img src="/assets/menu-open.svg"></label>
+          <div id="menu-close-label" style="display: none;"><img src="/assets/x.svg"></div>
+          <div id="menu-open-label" style="display: none;"><img src="/assets/menu-open.svg"></div>
+        
+        <div class="right-menu">
+            
+            <a aria-label="join our discord"
+               class="navbar-icon dagshub-tooltip"
+               tabindex="0"
+               href="https://discord.com/invite/9gU36Y6" onclick="trackAnalyticsEvent('DiscordIcon_Clicked')">
+              <img src="/assets/social_icons/discord.svg" aria-label="Connect to our Discord channel">
+              <span>Connect to Dagshub Discord channel</span>
+            </a>
+            
+            
+              
+                <div class="primary button">
+                  <a id="sign-up-navbar" data-analytics-event="Navbar_Register_Clicked"
+                     href="/user/sign_up?redirect_to=%2fVasim-rgb%2fapi%2f2.0%2fmlflow%2fexperiments%2fget-by-name
+
+">
+                    Register
+                  </a>
+                </div>
+              
+              <a id="sign-in-navbar" class="secondary button"
+                 data-analytics-event="Navbar_Login_Clicked"
+                 href="/user/login?redirect_to=%2fVasim-rgb%2fapi%2f2.0%2fmlflow%2fexperiments%2fget-by-name
+
+">
+                Login
+              </a>
+            
+        </div>
+      </div>
+    </div>
+  
+
+    
+
+<div class="ui container center">
+  <p style="margin-top: 100px"><img src="/img/404.png" alt="404"/></p>
+  <div class="ui divider"></div>
+  <br>
+  
+
+  
+  <p>
+    If you think this is an error, please report it on our
+    <strong>
+      <a href="https://discord.com/invite/9gU36Y6">Discord support channel <i class="discord icon"></i></a>
+    </strong>
+  </p>
+  Or, contact us at <a href="mailto:support@dagshub.com">support@dagshub.com</a>.</p>
+  
+
+  <br><br>
+  Provide this support ID: <strong>73b3e111d40ccb3a26995bbf83b7ab78</strong>
+</div>
+
+
+</div>
+<footer>
+  <div class="ui footer">
+      <div class="dagshub-footer">
+          <a href="https://dagshub.com/">
+            <img alt="footer DagsHub logo" id="footer-logo" class="ui centered image" aria-label="Dagshub home"
+                           src="/img/footerlogo.svg">
+          </a>
+          
+          <div id="footer-social" class="">
+            <a aria-label="DagsHub on Twitter" class="icon-link"
+               rel="nofollow" target="_blank"
+               href="https://twitter.com/TheRealDAGsHub">
+              <i class="twitter large icon"></i>
+            </a>
+            <a aria-label="DagsHub on YouTube" class="icon-link"
+               rel="nofollow" target="_blank"
+               href="https://youtube.com/c/dagshub">
+              <i class="youtube large icon"></i>
+            </a>
+            <a aria-label="DagsHub on LinkedIn" class="icon-link"
+               rel="nofollow" target="_blank"
+               href="https://www.linkedin.com/company/dagshub">
+              <i class="linkedin large icon"></i>
+            </a>
+            <a aria-label="join our Discord" class="icon-link"
+               rel="nofollow" target="_blank"
+               href="https://discord.com/invite/9gU36Y6">
+              
+              <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.2415 2.18566C18.7257 1.49015 17.1003 0.977731 15.4007 0.684245C15.3698 0.678581 15.3389 0.692736 15.3229 0.721047C15.1139 1.09286 14.8823 1.57791 14.7202 1.95916C12.8922 1.6855 11.0736 1.6855 9.28318 1.95916C9.12099 1.56944 8.88103 1.09286 8.67104 0.721047C8.6551 0.693681 8.62418 0.679525 8.59323 0.684245C6.89465 0.976793 5.26918 1.48921 3.75245 2.18566C3.73932 2.19133 3.72807 2.20077 3.7206 2.21303C0.637438 6.8192 -0.207169 11.3122 0.207167 15.7494C0.209041 15.7711 0.221228 15.7919 0.238101 15.8051C2.27228 17.2989 4.24273 18.2058 6.17659 18.807C6.20754 18.8164 6.24034 18.8051 6.26003 18.7796C6.71749 18.1549 7.12527 17.4962 7.4749 16.8035C7.49553 16.7629 7.47584 16.7148 7.43366 16.6988C6.78686 16.4534 6.17097 16.1542 5.57852 15.8145C5.53166 15.7872 5.52791 15.7201 5.57102 15.688C5.69569 15.5946 5.8204 15.4974 5.93944 15.3993C5.96098 15.3814 5.99099 15.3776 6.01631 15.3889C9.90842 17.1659 14.1221 17.1659 17.9683 15.3889C17.9936 15.3766 18.0236 15.3804 18.0461 15.3983C18.1652 15.4965 18.2898 15.5946 18.4154 15.688C18.4585 15.7201 18.4557 15.7872 18.4089 15.8145C17.8164 16.1608 17.2005 16.4534 16.5528 16.6978C16.5106 16.7139 16.4919 16.7629 16.5125 16.8035C16.8696 17.4952 17.2774 18.1539 17.7264 18.7787C17.7452 18.8051 17.7789 18.8164 17.8099 18.807C19.7531 18.2058 21.7235 17.2989 23.7577 15.8051C23.7755 15.7919 23.7868 15.7721 23.7887 15.7503C24.2845 10.6204 22.9581 6.16429 20.2724 2.21397C20.2659 2.20077 20.2546 2.19133 20.2415 2.18566ZM8.05612 13.0476C6.88433 13.0476 5.91881 11.9718 5.91881 10.6506C5.91881 9.32943 6.86561 8.25364 8.05612 8.25364C9.25598 8.25364 10.2122 9.33887 10.1934 10.6506C10.1934 11.9718 9.2466 13.0476 8.05612 13.0476ZM15.9585 13.0476C14.7867 13.0476 13.8212 11.9718 13.8212 10.6506C13.8212 9.32943 14.768 8.25364 15.9585 8.25364C17.1584 8.25364 18.1145 9.33887 18.0958 10.6506C18.0958 11.9718 17.1584 13.0476 15.9585 13.0476Z"/>
+              </svg>
+            </a>
+          </div>
+          
+        <div class="links">
+          
+          <a class="footer-item" rel="noopener noreferrer" href="/about">Our Story</a>
+          <a class="footer-item" rel="noopener noreferrer" href="/careers">Careers</a>
+              
+          <a id="merch-store" class="footer-item" rel="noopener noreferrer"
+             href="https://teespring.com/stores/dagshub">Merch</a>
+          <a class="footer-item" id="contact-us-footer" href="javascript:">Contact Us</a>
+          <script>
+            (function() {
+              const $contactModal = $('#contact-modal');
+              const $contactForm = $contactModal.find('#contact-form');
+              $contactModal.modal('attach events', '#contact-us-footer', 'show');
+              $('#contact-us-footer').on('click', () => {
+                $contactForm.attr('action', 'contact_form');
+              });
+            })();
+          </script>
+          
+              
+                <a class="footer-item" rel="noopener noreferrer" href="/enterprise">Enterprise</a>
+                <a class="footer-item" rel="noopener noreferrer" href="/pricing">Pricing</a>
+              
+        </div>
+          <h2>The home for data science collaboration</h2>
+          <div class="legal">
+            <p>© Copyright Dagshub 2025</p>
+          
+            <div class="">
+              <a class="footer-item" rel="noopener noreferrer" href="/terms">Terms of Service</a>
+              <a class="footer-item" rel="noopener noreferrer" href="/privacy">Privacy Policy</a>
+            </div>
+          
+            <div>
+              DagsHub Enterprise
+            </div>
+          </div>
+
+        </div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+  </div>
+</footer>
+
+
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/libs/emojify-1.1.0.min.js"></script>
+<script src="/js/libs/clipboard-1.5.9.min.js"></script>
+
+
+
+<script src="/js/gogs.js?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a"></script>
+<script src="/js/dagshub.js?v=421ac472ca1d3bdf4f6de6aad197a04ebe438e7a"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+'
+[2025-08-13 16:14:47,155: INFO: model_evaluation_pipeline: >>>>> stage started <<<<<]
+[2025-08-13 16:14:47,165: INFO: model_evaluation_pipeline: Model evaluation stage started]
+[2025-08-13 16:14:47,173: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 16:14:47,175: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 16:14:47,179: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 16:14:47,180: INFO: common: created directory at: artifacts]
+[2025-08-13 16:14:47,180: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-08-13 16:14:47,181: INFO: model_evalation: evaluating the model]
+[2025-08-13 16:14:47,986: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:14:48,006: INFO: helpers: Accessing as Vasim-rgb]
+[2025-08-13 16:14:48,871: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/vasim-rgb/mlops-spam "HTTP/1.1 200 OK"]
+[2025-08-13 16:14:49,712: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:14:49,712: INFO: helpers: Initialized MLflow to track repo "vasim-rgb/mlops-spam"]
+[2025-08-13 16:14:49,712: INFO: helpers: Repository vasim-rgb/mlops-spam initialized!]
+[2025-08-13 16:14:50,367: INFO: model_evalation: Model accuracy: 0.9793351302785265]
+[2025-08-13 16:14:52,617: ERROR: model_evaluation_pipeline: 'str' object has no attribute 'name']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_evaluation_pipeline.py", line 23, in <module>
+    model_evaluation_pipeline.initiate_model_evaluation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.Evaluate()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_evalation.py", line 42, in Evaluate
+    "model_name": self.config.model_path.name,
+AttributeError: 'str' object has no attribute 'name'
+[2025-08-13 16:15:28,665: INFO: model_evaluation_pipeline: >>>>> stage started <<<<<]
+[2025-08-13 16:15:28,665: INFO: model_evaluation_pipeline: Model evaluation stage started]
+[2025-08-13 16:15:28,675: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 16:15:28,683: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 16:15:28,685: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 16:15:28,686: INFO: common: created directory at: artifacts]
+[2025-08-13 16:15:28,687: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-08-13 16:15:28,688: INFO: model_evalation: evaluating the model]
+[2025-08-13 16:15:29,604: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:15:29,614: INFO: helpers: Accessing as Vasim-rgb]
+[2025-08-13 16:15:30,606: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/vasim-rgb/mlops-spam "HTTP/1.1 200 OK"]
+[2025-08-13 16:15:31,513: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:15:31,513: INFO: helpers: Initialized MLflow to track repo "vasim-rgb/mlops-spam"]
+[2025-08-13 16:15:31,523: INFO: helpers: Repository vasim-rgb/mlops-spam initialized!]
+[2025-08-13 16:15:31,677: INFO: model_evalation: Model accuracy: 0.9793351302785265]
+[2025-08-13 16:15:33,970: ERROR: model_evaluation_pipeline: float() argument must be a string or a real number, not 'MultinomialNB']
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_evaluation_pipeline.py", line 23, in <module>
+    model_evaluation_pipeline.initiate_model_evaluation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.Evaluate()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_evalation.py", line 45, in Evaluate
+    mlflow.log_metrics(metric)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\fluent.py", line 1140, in log_metrics
+    return MlflowClient().log_batch(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\client.py", line 2374, in log_batch
+    return self._tracking_client.log_batch(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 511, in log_batch
+    metrics = [
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 514, in <listcomp>
+    value=convert_metric_value_to_float_if_possible(metric.value),
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\metric_value_conversion_utils.py", line 53, in convert_metric_value_to_float_if_possible
+    return float(x)
+TypeError: float() argument must be a string or a real number, not 'MultinomialNB'
+[2025-08-13 16:20:17,535: INFO: model_evaluation_pipeline: >>>>> stage started <<<<<]
+[2025-08-13 16:20:17,535: INFO: model_evaluation_pipeline: Model evaluation stage started]
+[2025-08-13 16:20:17,545: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 16:20:17,555: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 16:20:17,557: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 16:20:17,558: INFO: common: created directory at: artifacts]
+[2025-08-13 16:20:17,559: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-08-13 16:20:17,560: INFO: model_evalation: evaluating the model]
+[2025-08-13 16:20:18,512: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:20:18,526: INFO: helpers: Accessing as Vasim-rgb]
+[2025-08-13 16:20:19,575: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/vasim-rgb/mlops-spam "HTTP/1.1 200 OK"]
+[2025-08-13 16:20:20,595: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:20:20,595: INFO: helpers: Initialized MLflow to track repo "vasim-rgb/mlops-spam"]
+[2025-08-13 16:20:20,605: INFO: helpers: Repository vasim-rgb/mlops-spam initialized!]
+[2025-08-13 16:20:21,282: INFO: model_evalation: Model accuracy: 0.9793351302785265]
+[2025-08-13 16:21:10,930: ERROR: model_evaluation_pipeline: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_evaluation_pipeline.py", line 23, in <module>
+    model_evaluation_pipeline.initiate_model_evaluation()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.Evaluate()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_evalation.py", line 54, in Evaluate
+    mlflow.sklearn.log_model(mnb, "model")
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\models\model.py", line 1166, in log
+    model = _create_logged_model(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\fluent.py", line 2282, in _create_logged_model
+    return MlflowClient()._create_logged_model(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\client.py", line 5379, in _create_logged_model
+    return self._tracking_client.create_logged_model(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\telemetry\track.py", line 27, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 841, in create_logged_model
+    return self.store.create_logged_model(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\store\tracking\rest_store.py", line 823, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\store\tracking\rest_store.py", line 133, in _call_endpoint
+    return call_endpoint(
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 553, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vasim\Desktop\spam_mlops\venv\lib\site-packages\mlflow\utils\rest_utils.py", line 308, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-08-13 16:29:17,425: INFO: model_evaluation_pipeline: >>>>> stage started <<<<<]
+[2025-08-13 16:29:17,425: INFO: model_evaluation_pipeline: Model evaluation stage started]
+[2025-08-13 16:29:17,435: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 16:29:17,444: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 16:29:17,447: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 16:29:17,448: INFO: common: created directory at: artifacts]
+[2025-08-13 16:29:17,448: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-08-13 16:29:17,450: INFO: model_evalation: evaluating the model]
+[2025-08-13 16:29:18,263: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:29:18,284: INFO: helpers: Accessing as Vasim-rgb]
+[2025-08-13 16:29:19,092: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/vasim-rgb/mlops-spam "HTTP/1.1 200 OK"]
+[2025-08-13 16:29:20,037: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 16:29:20,047: INFO: helpers: Initialized MLflow to track repo "vasim-rgb/mlops-spam"]
+[2025-08-13 16:29:20,047: INFO: helpers: Repository vasim-rgb/mlops-spam initialized!]
+[2025-08-13 16:29:20,586: INFO: model_evalation: Model accuracy: 0.9793351302785265]
+[2025-08-13 16:30:09,384: INFO: model_evaluation_pipeline: Model evaluation stage completed successfully.]
+[2025-08-13 16:30:09,384: INFO: model_evaluation_pipeline: >>>>> stage completed <<<<<]
+[2025-08-13 16:50:36,944: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 16:50:36,957: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 16:50:36,960: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 16:50:36,963: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 16:50:36,964: INFO: common: created directory at: artifacts]
+[2025-08-13 16:50:36,966: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 16:50:36,967: INFO: model_trainer: Training the model]
+[2025-08-13 16:50:37,917: ERROR: model_trainer_pipeline: name 'vectorizer' is not defined]
+Traceback (most recent call last):
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 23, in <module>
+    obj.initiate_model_training()
+  File "c:\Users\vasim\Desktop\spam_mlops\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_training
+    model_trainer_config.train()
+  File "c:\users\vasim\desktop\spam_mlops\src\datascience\components\model_trainer.py", line 26, in train
+    with open(os.path.join(self.config.root_dir, vectorizer), 'wb') as f:
+NameError: name 'vectorizer' is not defined
+[2025-08-13 16:51:09,453: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 16:51:09,463: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 16:51:09,473: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 16:51:09,477: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 16:51:09,478: INFO: common: created directory at: artifacts]
+[2025-08-13 16:51:09,479: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 16:51:09,479: INFO: model_trainer: Training the model]
+[2025-08-13 16:51:11,623: INFO: model_trainer: Model trained and saved at artifacts/model_trainer/model.joblib]
+[2025-08-13 16:51:11,693: INFO: model_trainer_pipeline: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:09:38,450: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-13 19:09:38,576: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:09:38,633: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:09:38,673: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:09:38,673: INFO: common: created directory at: artifacts]
+[2025-08-13 19:09:38,681: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 19:09:40,124: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Connection: close
+Content-Length: 503663
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/octet-stream
+ETag: "7f1b84caec4e45ed9903e5848b178a4e625fb130ea99aaf346d034e97060f848"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 663A:3EB259:866D5:101809:689C958F
+Accept-Ranges: bytes
+Date: Wed, 13 Aug 2025 13:39:39 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10248-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1755092379.916201,VS0,VE274
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 6e12d0e7dba7f06ffc439776b57fab9f288fde8f
+Expires: Wed, 13 Aug 2025 13:44:39 GMT
+Source-Age: 0
+
+]
+[2025-08-13 19:09:40,134: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:09:40,134: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 19:09:40,155: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:09:40,159: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:09:40,167: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:09:40,167: INFO: common: created directory at: artifacts]
+[2025-08-13 19:09:40,173: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 19:09:40,241: INFO: data_validation: all columns: ['target', 'text']]
+[2025-08-13 19:09:40,242: INFO: data_validation: all schema: dict_keys(['target', 'text'])]
+[2025-08-13 19:09:40,275: INFO: data_validation: Data validation completed successfully. Validated data saved at: artifacts/data_validation/validated_data.csv]
+[2025-08-13 19:09:40,275: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:09:40,275: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-13 19:09:40,294: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:09:40,294: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:09:40,294: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:09:40,304: INFO: common: created directory at: artifacts]
+[2025-08-13 19:09:40,304: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 19:09:40,404: INFO: data_transformation: nltk data downloaded successfully]
+[2025-08-13 19:09:42,861: INFO: data_transformation: Number of words in each text column calculated]
+[2025-08-13 19:09:42,861: INFO: data_transformation: Number of characters in each text column calculated]
+[2025-08-13 19:09:44,473: INFO: data_transformation: Plotting the distribution of number of words and characters in each text column]
+[2025-08-13 19:09:45,225: INFO: data_transformation: Plot saved at: artifacts/data_transformation\word_char_distribution.png]
+[2025-08-13 19:10:25,348: INFO: data_transformation: Text column transformed using nltk]
+[2025-08-13 19:10:25,348: INFO: data_transformation: New text column created by joining the transformed text]
+[2025-08-13 19:10:25,356: INFO: data_transformation: Dataframe created with target and new text column]
+[2025-08-13 19:10:25,379: INFO: data_transformation: Transformed data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 19:10:25,379: INFO: data_transformation: transofmation completed and data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 19:10:25,379: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:10:25,387: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 19:10:25,389: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:10:25,398: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:10:25,398: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:10:25,398: INFO: common: created directory at: artifacts]
+[2025-08-13 19:10:25,398: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 19:10:25,398: INFO: model_trainer: Training the model]
+[2025-08-13 19:10:26,457: INFO: model_trainer: Model trained and saved at artifacts/model_trainer/model.joblib]
+[2025-08-13 19:10:26,530: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:10:26,532: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-08-13 19:10:26,533: INFO: model_evaluation_pipeline: Model evaluation stage started]
+[2025-08-13 19:10:26,547: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:10:26,548: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:10:26,548: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:10:26,548: INFO: common: created directory at: artifacts]
+[2025-08-13 19:10:26,548: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-08-13 19:10:26,556: INFO: model_evalation: evaluating the model]
+[2025-08-13 19:10:27,726: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 19:10:27,758: INFO: helpers: Accessing as Vasim-rgb]
+[2025-08-13 19:10:29,158: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/vasim-rgb/mlops-spam "HTTP/1.1 200 OK"]
+[2025-08-13 19:10:30,282: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 19:10:30,289: INFO: helpers: Initialized MLflow to track repo "vasim-rgb/mlops-spam"]
+[2025-08-13 19:10:30,299: INFO: helpers: Repository vasim-rgb/mlops-spam initialized!]
+[2025-08-13 19:10:30,536: INFO: model_evalation: Model accuracy: 0.9793351302785265]
+[2025-08-13 19:11:29,242: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-13 19:11:29,254: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:11:29,263: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:11:29,263: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:11:29,263: INFO: common: created directory at: artifacts]
+[2025-08-13 19:11:29,263: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-13 19:11:29,263: INFO: data_ingestion: File already exists]
+[2025-08-13 19:11:29,263: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:11:29,263: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-13 19:11:29,271: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:11:29,282: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:11:29,282: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:11:29,282: INFO: common: created directory at: artifacts]
+[2025-08-13 19:11:29,282: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-13 19:11:29,304: INFO: data_validation: all columns: ['target', 'text']]
+[2025-08-13 19:11:29,304: INFO: data_validation: all schema: dict_keys(['target', 'text'])]
+[2025-08-13 19:11:29,337: INFO: data_validation: Data validation completed successfully. Validated data saved at: artifacts/data_validation/validated_data.csv]
+[2025-08-13 19:11:29,337: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:11:29,347: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-13 19:11:29,354: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:11:29,354: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:11:29,361: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:11:29,361: INFO: common: created directory at: artifacts]
+[2025-08-13 19:11:29,361: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-13 19:11:29,421: INFO: data_transformation: nltk data downloaded successfully]
+[2025-08-13 19:11:31,594: INFO: data_transformation: Number of words in each text column calculated]
+[2025-08-13 19:11:31,604: INFO: data_transformation: Number of characters in each text column calculated]
+[2025-08-13 19:11:31,789: INFO: data_transformation: Plotting the distribution of number of words and characters in each text column]
+[2025-08-13 19:11:32,381: INFO: data_transformation: Plot saved at: artifacts/data_transformation\word_char_distribution.png]
+[2025-08-13 19:12:07,781: INFO: data_transformation: Text column transformed using nltk]
+[2025-08-13 19:12:07,788: INFO: data_transformation: New text column created by joining the transformed text]
+[2025-08-13 19:12:07,812: INFO: data_transformation: Dataframe created with target and new text column]
+[2025-08-13 19:12:07,850: INFO: data_transformation: Transformed data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 19:12:07,850: INFO: data_transformation: transofmation completed and data saved at: artifacts/data_transformation/transformed_data.csv]
+[2025-08-13 19:12:07,857: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:12:07,857: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-13 19:12:07,867: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:12:07,867: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:12:07,867: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:12:07,876: INFO: common: created directory at: artifacts]
+[2025-08-13 19:12:07,876: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-13 19:12:07,876: INFO: model_trainer: Training the model]
+[2025-08-13 19:12:08,863: INFO: model_trainer: Model trained and saved at artifacts/model_trainer/model.joblib]
+[2025-08-13 19:12:08,915: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:12:08,919: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-08-13 19:12:08,920: INFO: model_evaluation_pipeline: Model evaluation stage started]
+[2025-08-13 19:12:08,920: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-13 19:12:08,930: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-13 19:12:08,930: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-08-13 19:12:08,930: INFO: common: created directory at: artifacts]
+[2025-08-13 19:12:08,930: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-08-13 19:12:08,930: INFO: model_evalation: evaluating the model]
+[2025-08-13 19:12:10,126: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 19:12:10,137: INFO: helpers: Accessing as Vasim-rgb]
+[2025-08-13 19:12:11,559: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/vasim-rgb/mlops-spam "HTTP/1.1 200 OK"]
+[2025-08-13 19:12:12,688: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-13 19:12:12,688: INFO: helpers: Initialized MLflow to track repo "vasim-rgb/mlops-spam"]
+[2025-08-13 19:12:12,688: INFO: helpers: Repository vasim-rgb/mlops-spam initialized!]
+[2025-08-13 19:12:12,880: INFO: model_evalation: Model accuracy: 0.9793351302785265]
+[2025-08-13 19:13:02,074: INFO: model_evaluation_pipeline: Model evaluation stage completed successfully.]
+[2025-08-13 19:13:02,074: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2025-08-13 19:18:25,695: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2025-08-13 19:18:25,695: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-08-13 19:18:25,695: INFO: _internal:  * Restarting with stat]
+[2025-08-13 19:18:30,417: WARNING: _internal:  * Debugger is active!]
+[2025-08-13 19:18:30,445: INFO: _internal:  * Debugger PIN: 125-858-063]
+[2025-08-13 19:18:34,719: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:18:34] "GET / HTTP/1.1" 200 -]
+[2025-08-13 19:18:35,293: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:18:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-08-13 19:18:53,908: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:18:53] "POST / HTTP/1.1" 200 -]
+[2025-08-13 19:19:58,542: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:19:58] "GET / HTTP/1.1" 200 -]
+[2025-08-13 19:20:29,239: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:20:29] "GET / HTTP/1.1" 200 -]
+[2025-08-13 19:21:56,080: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:21:56] "GET / HTTP/1.1" 200 -]
+[2025-08-13 19:22:15,190: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:22:15] "GET / HTTP/1.1" 200 -]
+[2025-08-13 19:22:47,425: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:22:47] "GET / HTTP/1.1" 200 -]
+[2025-08-13 19:23:04,410: INFO: _internal: 127.0.0.1 - - [13/Aug/2025 19:23:04] "POST / HTTP/1.1" 200 -]

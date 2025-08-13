@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📩 Spam Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #58814cff, #2980b9);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        textarea {
+            width: 300px;
+            height: 120px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        button {
+            margin-top: 15px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff4b2b;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📩 WASIM'S -Spam Detection App</h1>
+    <p>Type your message below to check if it's spam or not 🚀</p>
+    <form method="POST">
+        <textarea name="message" placeholder="Enter your message here..." required>{{ user_input }}</textarea><br>
+        <button type="submit">🔍 Check Message</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">{{ prediction }}</div>
+    {% endif %}
+</body>
+</html>

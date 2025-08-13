@@ -6,6 +6,7 @@ from src.datascience.entity.config_entity import ModelTrainerConfig
 from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
+import pickle
 class ModelTrainer:
     def __init__(self, config: ModelTrainerConfig):
         self.config = config
@@ -21,14 +22,12 @@ class ModelTrainer:
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
         mnb = MultinomialNB()
         mnb.fit(x_train, y_train)
-        # save train and test data
+        # save the vectorizer
+        with open(os.path.join(self.config.root_dir, 'vectorizer.pkl'), 'wb') as f:
+            pickle.dump(tfi, f)
         #stack xtrain y train and save it
-        train_data = pd.DataFrame(x_train, columns=[f'feature_{i}' for i in range(x_train.shape[1])])
-        train_data['target'] = y_train
-        train_data.to_csv(os.path.join(self.config.root_dir, 'train_data.csv'), index=False)
-        test_data = pd.DataFrame(x_test, columns=[f'feature_{i}' for i in range(x_test.shape[1])])
-        test_data['target'] = y_test
-        test_data.to_csv(os.path.join(self.config.root_dir, 'test_data.csv'), index=False)
+        with open(os.path.join(self.config.root_dir, 'train_test.pkl'), 'wb') as f:
+            pickle.dump((x_train, y_train, x_test, y_test), f)
         # Save model
         joblib.dump(mnb, os.path.join(self.config.root_dir, self.config.model_name))
         logger.info(f"Model trained and saved at {self.config.root_dir}/{self.config.model_name}")
